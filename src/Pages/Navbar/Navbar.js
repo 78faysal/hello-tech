@@ -7,10 +7,10 @@ const Navbar = () => {
 
     return (
 
-        <nav className="bg-white p-5 shadow">
+        <nav className="bg-white p-5 m-0 fixed w-full shadow">
             <div className='container md:flex md:items-center md:justify-between mx-auto'>
                 <div className="">
-                    <span className="self-center text-2xl font-bold whitespace-nowrap dark:text-white">
+                    <span className="self-center text-2xl text-gray-800 font-mono font-bold whitespace-nowrap dark:text-white">
                         <img className='h-16 inline me-2' src={navLogo} alt="" />
                         Hello Tech</span>
 
@@ -29,13 +29,13 @@ const Navbar = () => {
                         <a href="" className='text-xl hover:text-indigo-500 duration-500'>About</a>
                     </li>
                     <li className='mx-3 my-4 md:my-0'>
-                        <a href="" className='text-xl hover:text-indigo-500 duration-500'>Services</a>
+                        <a href="" className='text-xl hover:text-indigo-500 duration-500'>Courses</a>
                     </li>
                     <li className='mx-3 my-4 md:my-0'>
-                        <a href="" className='text-xl hover:text-indigo-500 duration-500'>Contact</a>
+                        <a href="" className='text-xl hover:text-indigo-500 duration-500'>FAQ</a>
                     </li>
                     <li className='mx-3 my-4 md:my-0'>
-                        <a href="" className='text-xl hover:text-indigo-500 duration-500'>Blogs</a>
+                        <a href="" className='text-xl hover:text-indigo-500 duration-500'>Blog</a>
                     </li>
                 </ul>
             </div>
