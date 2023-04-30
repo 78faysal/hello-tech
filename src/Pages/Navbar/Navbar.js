@@ -12,7 +12,7 @@ const Navbar = () => {
                 <div className="">
                     <span className="self-center text-2xl text-gray-800 font-mono font-bold whitespace-nowrap dark:text-white">
                         <img className='h-16 inline me-2' src={navLogo} alt="" />
-                        Hello Tech</span>
+                        </span>
 
                 </div>
 

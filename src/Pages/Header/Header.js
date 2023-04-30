@@ -6,7 +6,7 @@ const Header = () => {
         <div className='header-section min-h-screen flex justify-center items-center bg-gray-500 text-white pt-10 '>
             <div className="max-w-md">
                 <div className="max-w-7xl text-center px-4">
-                    <h1 className="text-4xl font-bold">Let's know and learn technology from <br /> <span className='text-5xl font-bold text-indigo-400'>Hello Tech </span></h1>
+                    <h1 className="text-5xl font-bold">Let's know and learn technology from <br /> <span className='text-6xl font-bold text-indigo-400'>Hello Tech </span></h1>
                     <div className='mt-5'>
                         <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-3 rounded-full mr-2">
                             Start Now
