@@ -1,12 +1,34 @@
 import logo from './logo.svg';
 import './App.css';
 import Home from './Pages/Home/Home';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import LogIn from './Pages/LogIn/LogIn';
+import Navbar from './Pages/Navbar/Navbar';
+import Footer from './Pages/Footer/Footer';
+import About from './Pages/About/About';
+import NotFound from './Pages/NotFound/NotFound';
+import Courses from './Pages/Courses/Courses';
+import FAQ from './Pages/FAQ/FAQ';
+import Blog from './Pages/Blog/Blog';
 
 function App() {
   return (
-    <div className="">
-      <Home></Home>
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route exact path='/' element={<Home />} />
+        <Route path='/home' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/courses' element={<Courses />} />
+        <Route path='/faq' element={<FAQ />} />
+        <Route path='/blog' element={<Blog />} />
+        <Route path='/login' element={<LogIn />} />
+
+
+        <Route path='*' element={<NotFound />} />
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
 
