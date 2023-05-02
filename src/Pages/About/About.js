@@ -3,7 +3,7 @@ import img from '../../Images/about.jpg';
 
 const About = () => {
     return (
-        <div className='bg-blue-100 pt-5 mt-10'>
+        <div className='bg-blue-100 pt-10 mt-10'>
             <div className='lg:flex justify-around items-center container gap-5 p-10 mx-auto'>
                 <img className='w-80' src={img} alt="" />
                 <div className='lg:w-3/5 mx-auto'>
