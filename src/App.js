@@ -10,6 +10,7 @@ import NotFound from './Pages/NotFound/NotFound';
 import Courses from './Pages/Courses/Courses';
 import FAQ from './Pages/FAQ/FAQ';
 import Blog from './Pages/Blog/Blog';
+import CourseDetail from './Pages/Courses/CourseDetail/CourseDetail';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path='/faq' element={<FAQ />} />
         <Route path='/blog' element={<Blog />} />
         <Route path='/login' element={<LogIn />} />
+        <Route path='/courses/courseDetail' element={<CourseDetail />} />
 
 
         <Route path='*' element={<NotFound />} />
