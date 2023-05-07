@@ -24,7 +24,7 @@ function App() {
         <Route path='/faq' element={<FAQ />} />
         <Route path='/blog' element={<Blog />} />
         <Route path='/login' element={<LogIn />} />
-        <Route path='/courses/courseDetail' element={<CourseDetail />} />
+        <Route path='/courseDetail/:courseId' element={<CourseDetail />} />
 
 
         <Route path='*' element={<NotFound />} />
