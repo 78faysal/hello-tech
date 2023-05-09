@@ -17,12 +17,13 @@ const CourseDetail = () => {
         <div className='mt-28'>
             <div className='container mx-auto'>
                 <img className='h-72 w-full object-cover' src={courseData?.img} alt="" />
-
+                <br />
                 <div>
                     <h2 className='text-4xl font-bold'>{courseData?.title}</h2>
-                    <p className='text-xl font-bold'>{courseData?.duration}</p>
-                    <p>{courseData?.overview}</p>
-                    <p></p>
+                    <p className='text-xl font-bold'>{courseData?.duration}</p><br />
+                    <p><span>Overview:</span> {courseData?.overview}</p> <br />
+                    <p>{courseData?.objections}</p>
+
                 </div>
             </div>
         </div>
