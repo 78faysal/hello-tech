@@ -6,7 +6,7 @@ const Courses = () => {
     const [courses, setCourses] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/coursesData')
+        fetch('http://localhost:5000/courseDetail')
             .then(res => res.json())
             .then(data => setCourses(data))
     }, [])
