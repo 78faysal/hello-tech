@@ -38,7 +38,7 @@ const FAQ = () => {
     };
 
     return (
-        <div className="w-full max-w-md mx-auto mt-32">
+        <div className="w-full max-w-md mx-auto mt-32 mb-5">
             <h2 className='text-4xl text-indigo-400 text-center font-bold'>FAQ</h2>
             {accordions.map((accordion, index) => (
                 <div key={index} className="border-b">
@@ -48,7 +48,7 @@ const FAQ = () => {
                     >
                         <h3 className="text-lg font-medium">{accordion.title}</h3>
                         <svg
-                            className={`w-4 h-4 transition-transform transform ${activeIndex === index ? 'rotate-180' : ''
+                            className={`w-4 h-4 transition-transform ${activeIndex === index ? 'rotate-180' : ''
                                 }`}
                             fill="none"
                             stroke="currentColor"
