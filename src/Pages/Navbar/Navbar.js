@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useState } from 'react';
 import navLogo from '../../Images/logo.png';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../contexts/UserContext';
 
 const Navbar = () => {
+
+    const {user} = useContext(AuthContext);
+    console.log(user)
+
     const [open, setOpen] = useState(false);
 
     return (
@@ -39,11 +44,11 @@ const Navbar = () => {
                         <Link to="/blog" className='text-xl hover:text-indigo-500 duration-500'>Blog</Link>
                     </li>
 
-                    <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-5 py-2 rounded mr-2">
-                        <Link to="/login">
-                            Log In
-                        </Link>
-                    </button>
+                    {/* <button className='bg-blue-600 hover:bg-blue-700 text-white font-bold px-5 py-2 rounded mr-2'>
+                            <Link to="/login">Log In</Link>
+                        </button> */}
+
+                    { user?.displayName && <span>{user.displayName}</span>}
                 </ul>
             </div>
 
