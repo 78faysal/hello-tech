@@ -11,6 +11,7 @@ import Courses from './Pages/Courses/Courses';
 import FAQ from './Pages/FAQ/FAQ';
 import Blog from './Pages/Blog/Blog';
 import CourseDetail from './Pages/Courses/CourseDetail/CourseDetail';
+import Register from './Pages/Register/Register';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path='/faq' element={<FAQ />} />
         <Route path='/blog' element={<Blog />} />
         <Route path='/login' element={<LogIn />} />
+        <Route path='/register' element={<Register />} />
         <Route path='/courseDetail/:courseId' element={<CourseDetail />} />
 
 
