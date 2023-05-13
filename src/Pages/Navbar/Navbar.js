@@ -47,7 +47,8 @@ const Navbar = () => {
                             <Link to="/login">Log In</Link>
                         </button> */}
 
-                    { user?.displayName && <span>{user.displayName}</span>}
+                    { user?.email && <span>{user.email}</span>}
+                    <button className='bg-blue-600 hover:bg-blue-700 text-white font-bold px-5 py-2 rounded mr-2'>LogOut</button>
                 </ul>
             </div>
 
