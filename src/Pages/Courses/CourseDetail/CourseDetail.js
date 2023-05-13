@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const CourseDetail = () => {
 
@@ -15,7 +15,7 @@ const CourseDetail = () => {
 
     return (
         <div className='mt-28'>
-            <div className='container mx-auto'>
+            <div className='container mx-auto p-5'>
                 <img className='h-72 w-full object-cover' src={courseData?.img} alt="" />
                 <br />
                 <div>
@@ -23,8 +23,12 @@ const CourseDetail = () => {
                     <p className='text-xl font-bold'>{courseData?.duration}</p><br />
                     <p><span>Overview:</span> {courseData?.overview}</p> <br />
                     <p>{courseData?.objections}</p>
-
                 </div>
+                <div className='flex gap-4 my-5'>
+                    <Link className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ' to='/' >Enroll Now</Link>
+                    <p className='text-3xl font-bold'>$30</p>
+                </div>
+
             </div>
         </div>
     );
