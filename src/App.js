@@ -12,6 +12,7 @@ import FAQ from './Pages/FAQ/FAQ';
 import Blog from './Pages/Blog/Blog';
 import CourseDetail from './Pages/Courses/CourseDetail/CourseDetail';
 import Register from './Pages/Register/Register';
+import PrivateRoute from './routes/PrivateRoute';
 
 function App() {
   return (
@@ -21,12 +22,12 @@ function App() {
         <Route exact path='/' element={<Home />} />
         <Route path='/home' element={<Home />} />
         <Route path='/about' element={<About />} />
-        <Route path='/courses' element={<Courses />} />
+        <Route path='/courses' element={<PrivateRoute><Courses /></PrivateRoute>} />
         <Route path='/faq' element={<FAQ />} />
         <Route path='/blog' element={<Blog />} />
         <Route path='/login' element={<LogIn />} />
         <Route path='/register' element={<Register />} />
-        <Route path='/courseDetail/:courseId' element={<CourseDetail />} />
+        <Route path='/courseDetail/:courseId' element={<PrivateRoute><CourseDetail /></PrivateRoute>} />
 
 
         <Route path='*' element={<NotFound />} />

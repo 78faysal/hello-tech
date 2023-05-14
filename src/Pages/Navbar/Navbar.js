@@ -6,9 +6,15 @@ import { AuthContext } from '../../contexts/UserContext';
 
 const Navbar = () => {
 
-    const {user} = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
 
     const [open, setOpen] = useState(false);
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(err => console.error(err))
+    };
 
     return (
 
@@ -43,12 +49,17 @@ const Navbar = () => {
                         <Link to="/blog" className='text-xl hover:text-indigo-500 duration-500'>Blog</Link>
                     </li>
 
-                    {/* <button className='bg-blue-600 hover:bg-blue-700 text-white font-bold px-5 py-2 rounded mr-2'>
-                            <Link to="/login">Log In</Link>
-                        </button> */}
 
-                    { user?.email && <span>{user.email}</span>}
-                    <button className='bg-blue-600 hover:bg-blue-700 text-white font-bold px-5 py-2 rounded mr-2'>LogOut</button>
+                    {user?.email && <span>{user.email}</span>}
+                    
+                    {
+                        user?.email ?
+                            <button onClick={handleLogOut} className='bg-blue-600 hover:bg-blue-700 text-white font-bold px-5 py-2 rounded mr-2'>LogOut</button>
+                        :
+                        <button className='bg-blue-600 hover:bg-blue-700 text-white font-bold px-5 py-2 rounded mr-2'>
+                                <Link to="/login">Log In</Link>
+                            </button>
+                    }
                 </ul>
             </div>
 
