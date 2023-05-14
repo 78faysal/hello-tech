@@ -5,7 +5,7 @@ import { AuthContext } from '../../contexts/UserContext';
 
 const LogIn = () => {
 
-    const {signIn, signInWithGoogle, signInWithGitHub} = useContext(AuthContext);
+    const { signIn, signInWithGoogle, signInWithGitHub } = useContext(AuthContext);
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -27,22 +27,22 @@ const LogIn = () => {
 
     const handleGoogleSignIn = () => {
         signInWithGoogle()
-            .then( result => {
+            .then(result => {
                 const user = result.user;
                 console.log(user);
             })
-            .catch( err => {
+            .catch(err => {
                 console.error(err);
             })
     };
 
     const handleGitHubSignIn = () => {
         signInWithGitHub()
-            .then( result => {
+            .then(result => {
                 const user = result.user;
                 console.log(user);
             })
-            .catch( err => {
+            .catch(err => {
                 console.error(err);
             })
     };
@@ -50,13 +50,11 @@ const LogIn = () => {
 
     return (
         <div>
-            <section className="bg-gray-50 dark:bg-gray-900 py-20 mt-28">
+            <section className="bg-gray-50 dark:bg-gray-900 py-10 mt-28">
+                <h2 className='text-4xl text-blue-700 text-center font-bold'>Log In</h2>
                 <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
                     <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
                         <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
-                            <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
-                                Sign in to your account
-                            </h1>
                             <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6" action="#">
                                 <div>
                                     <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
@@ -75,7 +73,7 @@ const LogIn = () => {
                                     Don’t have an account yet? <Link to='/register' className='font-medium text-primary-600 hover:underline dark:text-primary-500'>Register Now</Link>
                                 </p>
                                 <button type="submit" className="w-full text-black border-2 bg-primary-600 bg-blue-100 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Sign in</button>
-                                
+
                             </form>
                         </div>
                     </div>

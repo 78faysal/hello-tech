@@ -48,15 +48,18 @@ const Navbar = () => {
                     <li className='mx-3 my-4 md:my-0'>
                         <Link to="/blog" className='text-xl hover:text-indigo-500 duration-500'>Blog</Link>
                     </li>
+                    <li className='mx-3 my-4 md:my-0'>
+                        <Link to="/pricing" className='text-xl hover:text-indigo-500 duration-500'>Pricing</Link>
+                    </li>
 
 
-                    {user?.email && <span>{user.email}</span>}
+                    {user?.displayName && <span className='me-2'>{user.displayName}</span>}
                     
                     {
                         user?.email ?
-                            <button onClick={handleLogOut} className='bg-blue-600 hover:bg-blue-700 text-white font-bold px-5 py-2 rounded mr-2'>LogOut</button>
+                            <button onClick={handleLogOut} className='bg-blue-500 hover:bg-blue-700 text-white font-bold px-5 py-2 rounded mr-2'>LogOut</button>
                         :
-                        <button className='bg-blue-600 hover:bg-blue-700 text-white font-bold px-5 py-2 rounded mr-2'>
+                        <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold px-5 py-2 rounded mr-2'>
                                 <Link to="/login">Log In</Link>
                             </button>
                     }

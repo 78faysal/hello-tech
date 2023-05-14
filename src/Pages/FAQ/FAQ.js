@@ -38,8 +38,9 @@ const FAQ = () => {
     };
 
     return (
-        <div className="w-full max-w-md mx-auto mt-32 mb-5">
-            <h2 className='text-4xl text-indigo-400 text-center font-bold'>FAQ</h2>
+        <div className='bg-blue-100 py-14 mt-28'>
+            <div className="w-full max-w-md mx-auto mb-5">
+            <h2 className='text-4xl text-blue-700 text-center font-bold'>FAQ</h2>
             {accordions.map((accordion, index) => (
                 <div key={index} className="border-b">
                     <div
@@ -71,6 +72,7 @@ const FAQ = () => {
                     </div>
                 </div>
             ))}
+        </div>
         </div>
     );
 };

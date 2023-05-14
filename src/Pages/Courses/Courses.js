@@ -11,7 +11,9 @@ const Courses = () => {
             .then(data => setCourses(data))
     }, [])
     return (
-        <div className="flex flex-wrap justify-center mt-28">
+        <div className='mt-28'>
+            <h2 className='text-4xl text-blue-700 text-center font-bold'>Courses</h2>
+        <div className="flex flex-wrap justify-center">
             {
                 courses.map((course) => {
                     return (
@@ -41,6 +43,7 @@ const Courses = () => {
                     );
                 })
             }
+        </div>
         </div>
     );
 };
