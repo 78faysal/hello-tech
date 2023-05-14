@@ -1,6 +1,6 @@
 # Hello Tech 
 
-https://github.com/facebook/create-react-app
+https://hello-tech-web.netlify.app/
 
 Created by
 1. ReactJs
